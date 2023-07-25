@@ -1,11 +1,13 @@
 pipeline {
-  agent none
-  stages {
-    stage('') {
-      steps {
-        git 'https://github.com/shinobi94/text'
-      }
+    agent any
+    stages {
+        stage('error') {
+            agent any
+            steps {
+                // Your steps here
+                git 'https://github.com/shinobi94/text.git'
+                // Other steps
+            }
+        }
     }
-
-  }
 }
